@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Widget Chat Streamlabs Perso</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="log" class="sl__chat__layout"></div>
+
+<!-- Template message -->
+<script type="text/template" id="chatlist_item">
+    <div class="chat-item" data-from="{from}" data-id="{messageId}">
+        <span class="meta" style="color: {color}">
+            <span class="badges">{badges}</span>
+            <span class="name">{from}</span><span class="colon">:</span>
+        </span>
+        <span class="message">{message}</span>
+    </div>
+</script>
+
+<script src="widget.js"></script>
+</body>
+</html>
