@@ -11,7 +11,7 @@ html, body {
 
 body {
     text-shadow: 0 0 1px #000, 0 0 2px #000;
-    background: #222; /* tu peux changer */
+    background: #222;
     font-family: 'Arial Black', Arial, sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -52,10 +52,10 @@ body {
 
 /* message */
 .chat-item .message {
-    display: inline-block;
+    display: block;         /* chaque ligne sous le pseudo */
     max-width: calc(100% - 50px);
-    white-space: pre-wrap; /* conserve les retours à la ligne */
     word-wrap: break-word;
+    white-space: pre-wrap;  /* conserve les retours à la ligne */
 }
 
 /* badges */
