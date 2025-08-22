@@ -1,0 +1,79 @@
+/* reset de base */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+    background: #222; /* tu peux changer */
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+/* zone des messages */
+#log {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* chaque message */
+.chat-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.2em;
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease 10s forwards;
+}
+
+/* pseudo */
+.chat-item .meta {
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: left;
+    margin: 0;
+    padding-right: 0.3em;
+    display: inline-block;
+}
+
+/* message */
+.chat-item .message {
+    display: inline-block;
+    max-width: calc(100% - 50px);
+    white-space: pre-wrap; /* conserve les retours à la ligne */
+    word-wrap: break-word;
+}
+
+/* badges */
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+/* animation */
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
